@@ -34,17 +34,38 @@ const ContactUs = () => {
         </div>
 
         <div className="basis-1/2 md:p-18 p-10">
-          <div className="w-30 h-30 bg-indigo-600">Image</div>
-          <div>
-            <MapPinIcon className="w-10 h-10 fill-red-400" /> 6th Avenue, Wall
-            Street, New York
+          <div className=" m-56 bg-indigo-600 ">Image</div>
+
+          {/* <div>
+            <MapPinIcon className="w-10 h-10 fill-red-400" />{" "}
+            <span>6th Avenue, Wall Street, New York</span>
+          </div> */}
+          <div className="flex flex-row">
+            <div className="basis-1/6">
+              <MapPinIcon className="w-10 h-14 fill-red-400" />
+            </div>
+            <div className="basis-5/6 text-2xl">
+              6th Avenue, Wall Street, New York
+            </div>
           </div>
-          <div>
+          {/* <div>
             <EnvelopeIcon className="w-10 h-10 fill-red-400" />
             rounddigital@gmail.com
+          </div> */}
+          <div className="flex flex-row">
+            <div className="basis-1/6">
+              <EnvelopeIcon className="w-10 h-14 fill-red-400" />
+            </div>
+            <div className="basis-4/6 text-2xl">rounddigital@gmail.com</div>
           </div>
-          <div>
+          {/* <div>
             <PhoneIcon className="w-10 h-10 fill-red-400" /> 602- 213-4143
+          </div> */}
+          <div className="flex flex-row">
+            <div className="basis-1/6 ">
+              <PhoneIcon className="w-10 h-14 fill-red-400" />
+            </div>
+            <div className="basis-4/6 text-2xl">602- 213-4143</div>
           </div>
         </div>
       </div>
