@@ -65,7 +65,7 @@ const ContactUs = () => {
             <div className="basis-1/6 ">
               <PhoneIcon className="w-10 h-14 fill-red-400" />
             </div>
-            <div className="basis-4/6 text-2xl">602- 213-4143</div>
+            <div className="basis-4/6 md:text-2xl">602- 213-4143</div>
           </div>
         </div>
       </div>
