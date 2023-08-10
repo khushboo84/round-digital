@@ -31,7 +31,7 @@ const Navbar = () => {
         <ul className="md:flex basis-4/6 pr-6 ">
           {links.map((links) => (
             <li className="my-7 md:my-0 md:ml-16 font-semibold">
-              <a href="/">{links.name}</a>
+              <a href={links.link}>{links.name}</a>
             </li>
           ))}
         </ul>
