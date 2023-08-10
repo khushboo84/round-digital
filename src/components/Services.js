@@ -5,12 +5,28 @@ import listIcon from "../assets/listIcon.png";
 import picservice3 from "../assets/services-3.png";
 import picservice2 from "../assets/services-2.png";
 import picservice4 from "../assets/services-4.png";
+import picservicesmain from "../assets/services-main.png";
 
 const Services = () => {
   return (
     <>
       <Navbar />
       <div className="">
+        <div>
+          <div className="absolute top-[30%] xl:left-[25%] lg:left-[15%]">
+            <h1 className="font-bold text-5xl text-center">
+              Make your Digital presence matter
+            </h1>
+            <p className="py-8">
+              We are a full service technology and digital solutions company
+              with over 20 years of experience in industry.
+            </p>
+            <button className="rounded-full px-8 py-2 mx-80 bg-[#DF3A3A] text-white">
+              Explore
+            </button>
+          </div>
+          <img src={picservicesmain} className="w-full" alt="Main display " />
+        </div>
         {/* 1 */}
         <div className="flex flex-row md:px-20  md:py-16 px-10 py-8">
           <div className="basis-1/2 py-40 px-10">
@@ -31,13 +47,13 @@ const Services = () => {
             </ul>
           </div>
           <div className="basis-1/2 p-10">
-            <img src={picservice1} className="h-[38rem]" />
+            <img src={picservice1} className="h-[34rem]" alt="section1" />
           </div>
         </div>
         {/* 2 */}
         <div className="flex flex-row md:px-20  md:py-10 px-10 py-8">
           <div className="basis-1/2 p-10">
-            <img src={picservice2} className="h-[38rem]" />
+            <img src={picservice2} className="h-[34rem]" alt="section2" />
           </div>
           <div className="basis-1/2 py-40 px-10">
             <h1 className="text-3xl  text-[#DF3A3A] pb-4">
@@ -77,13 +93,13 @@ const Services = () => {
             </ul>
           </div>
           <div className="basis-1/2 p-10">
-            <img src={picservice3} className="h-[38rem]" />
+            <img src={picservice3} className="h-[34rem]" alt="section3" />
           </div>
         </div>
         {/* 4 */}
         <div className="flex flex-row md:px-20  md:py-10 px-10 py-8">
           <div className="basis-1/2 p-10">
-            <img src={picservice4} className="h-[38rem]" />
+            <img src={picservice4} className="h-[34rem]" alt="section4" />
           </div>
           <div className="basis-1/2 py-40 px-8">
             <h1 className="text-3xl  text-[#DF3A3A] pb-4">
