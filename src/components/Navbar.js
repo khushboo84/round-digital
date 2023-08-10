@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="shadow-md w-full ">
+    <div className="shadow-md w-full sticky top-0">
       {/* fixed top-0 left-0 find solution for the overlapping */}
       <div className="md:flex flex-row md:px-20 py-8 px-7 font-bold ">
         {/* Logo here */}
@@ -31,7 +31,7 @@ const Navbar = () => {
         <ul className="md:flex basis-4/6 pr-6 ">
           {links.map((links) => (
             <li className="my-7 md:my-0 md:ml-16 font-semibold">
-              <a href={links.link}>{links.name}</a>
+              {/* <a href={links.link}>{links.name}</a> */}
             </li>
           ))}
         </ul>

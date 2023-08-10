@@ -1,0 +1,6 @@
+Issues
+
+Figma image download - Solved
+navbar - mobile view dropdown 
+contact us icons - text alignment and sizing in mobile version
+service - list - icon display

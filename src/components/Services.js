@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React from "react";
 import Navbar from "./Navbar";
 import picservice1 from "../assets/services-1.jfif";
@@ -8,118 +9,137 @@ import picservice4 from "../assets/services-4.png";
 import picservicesmain from "../assets/services-main.png";
 
 const Services = () => {
+  const services = [
+    {
+      id: 1,
+      name: "Strategy services",
+      text: "We fuel the growth of purpose driven brands through strategy activation, design empowerment, and market adoption. From cultivating new ideas to connecting the dots for customers or users, these are our core principles.",
+      image: "../assets/services-1.jfif",
+      serviceOffered: [
+        "Market and competitive research",
+        "CRM and sales funnel strategy",
+        "Brand positioning and messaging",
+        "Automation",
+        "UX Consulting",
+        "Marketing Strategy",
+      ],
+    },
+    {
+      id: 2,
+      name: "Marketing services",
+      text: "Reality is a new reality. With a well-built digital strategy we leverage this stellar tech to propel your brand forward.",
+      image: "picservice2",
+      serviceOffered: [
+        "Digital marketing campaigns",
+        "Lead nurturing",
+        "Marketing personas",
+        "Content creation",
+        "Branding",
+        "SEO",
+      ],
+    },
+    {
+      id: 3,
+      name: "Design services",
+      text: " We design digital platforms to empower users and your brand'stribe. This deep understanding of what motivates them allows us to forge and fine-tune the most powerful strategies that generate rapid ROI for your business.",
+      image: "{picservice3}",
+      serviceOffered: [
+        "User testing & personas",
+        "Wireframing and prototyping",
+        "Website design",
+        "UI/UX Design",
+        "Graphic print design",
+        "Animations",
+      ],
+    },
+    {
+      id: 4,
+      name: "Development services",
+      text: " Together, we define, develop, and deliver different design solutions that create an unparalleled competitive advantage for Web3 companies in a sea of competition.",
+      image: "picservice4",
+      serviceOffered: [
+        "Website maintenance and hosting",
+        "Website building",
+        "Platform and data migration",
+        "CRM implementation",
+        "CRM implementation",
+      ],
+    },
+  ];
   return (
     <>
       <Navbar />
-      <div className="">
-        <div>
-          <div className="absolute top-[30%] xl:left-[25%] lg:left-[15%]">
-            <h1 className="font-bold text-5xl text-center">
-              Make your Digital presence matter
-            </h1>
-            <p className="py-8">
-              We are a full service technology and digital solutions company
-              with over 20 years of experience in industry.
-            </p>
-            <button className="rounded-full px-8 py-2 mx-80 bg-[#DF3A3A] text-white">
-              Explore
-            </button>
-          </div>
-          <img src={picservicesmain} className="w-full" alt="Main display " />
-        </div>
-        {/* 1 */}
-        <div className="flex flex-row md:px-20  md:py-16 px-10 py-8">
-          <div className="basis-1/2 py-40 px-10">
-            <h1 className="text-3xl  text-[#DF3A3A] pb-4">Strategy services</h1>
-            <p className="pb-8 pr-4">
-              We fuel the growth of purpose driven brands through strategy
-              activation, design empowerment, and market adoption. From
-              cultivating new ideas to connecting the dots for customers or
-              users, these are our core principles.
-            </p>
-            <ul className="grid grid-rows-3 grid-flow-col gap-2 text-sm text-[#DF3A3A]">
-              <li>Market and competitive research</li>
-              <li>CRM and sales funnel strategy</li>
-              <li>Brand positioning and messaging</li>
-              <li>Automation</li>
-              <li>UX Consulting</li>
-              <li>Marketing Strategy</li>
-            </ul>
-          </div>
-          <div className="basis-1/2 p-10">
-            <img src={picservice1} className="h-[34rem]" alt="section1" />
-          </div>
-        </div>
-        {/* 2 */}
-        <div className="flex flex-row md:px-20  md:py-10 px-10 py-8">
-          <div className="basis-1/2 p-10">
-            <img src={picservice2} className="h-[34rem]" alt="section2" />
-          </div>
-          <div className="basis-1/2 py-40 px-10">
-            <h1 className="text-3xl  text-[#DF3A3A] pb-4">
-              Marketing services
-            </h1>
-            <p className="pb-8 pr-4">
-              Reality is a new reality. With a well-built digital strategy we
-              leverage this stellar tech to propel your brand forward.
-            </p>
-            <ul className="grid grid-rows-3 grid-flow-col gap-2 text-sm text-[#DF3A3A]">
-              <li>Digital marketing campaigns</li>
-              <li>Lead nurturing</li>
-              <li>Marketing personas</li>
-              <li>Content creation</li>
-              <li>Branding</li>
-              <li>SEO</li>
-            </ul>
-          </div>
-        </div>
-        {/* 3 */}
-        <div className="flex flex-row md:px-20  md:py-10 px-10 py-8">
-          <div className="basis-1/2 py-40 px-10">
-            <h1 className="text-3xl  text-[#DF3A3A] pb-4">Design services</h1>
-            <p className="pb-8 pr-4">
-              We design digital platforms to empower users and your brand's
-              tribe. This deep understanding of what motivates them allows us to
-              forge and fine-tune the most powerful strategies that generate
-              rapid ROI for your business.
-            </p>
-            <ul className="grid grid-rows-3 grid-flow-col gap-2 text-sm text-[#DF3A3A]">
-              <li>User testing & personas</li>
-              <li>Wireframing and prototyping</li>
-              <li>Website design</li>
-              <li>UI/UX Design</li>
-              <li>Graphic print design</li>
-              <li>Animations</li>
-            </ul>
-          </div>
-          <div className="basis-1/2 p-10">
-            <img src={picservice3} className="h-[34rem]" alt="section3" />
-          </div>
-        </div>
-        {/* 4 */}
-        <div className="flex flex-row md:px-20  md:py-10 px-10 py-8">
-          <div className="basis-1/2 p-10">
-            <img src={picservice4} className="h-[34rem]" alt="section4" />
-          </div>
-          <div className="basis-1/2 py-40 px-8">
-            <h1 className="text-3xl  text-[#DF3A3A] pb-4">
-              Development services
-            </h1>
-            <p className="pb-8 pr-4">
-              Together, we define, develop, and deliver different design
-              solutions that create an unparalleled competitive advantage for
-              Web3 companies in a sea of competition.
-            </p>
-            <ul className="grid grid-rows-2 grid-flow-col gap-2 text-sm text-[#DF3A3A]">
-              <li>Website maintenance and hosting</li>
-              <li>Website building</li>
-              <li>Platform and data migration</li>
-              <li>CRM implementation</li>
-            </ul>
-          </div>
-        </div>
-        {/*  */}
-      </div>
+
+      {screen.width < "768"
+        ? services.map((s) => (
+            <div className="">
+              <div className="text-sm p-8">
+                <h1 className="text-3xl  text-[#DF3A3A] pb-4">{s.name}</h1>
+                <p className="">{s.text}</p>
+                <ul className="grid grid-rows-3 grid-flow-col gap-2 text-xs text-[#DF3A3A] pt-4">
+                  {s.serviceOffered.map((so) => (
+                    <span className="flex items-center gap-1">
+                      <img src={listIcon} className="w-2 h-1 " alt="listicon" />
+                      <li>{so}</li>
+                    </span>
+                  ))}
+                </ul>
+              </div>
+              <div className="p-10">
+                <img src={s.image} className="w-full" alt="section2" />
+                {console.log(s.image)}
+              </div>
+            </div>
+          ))
+        : services.map((s) =>
+            s.id % 2 ? (
+              <div className="md:flex flex-row">
+                <div className=" basis-1/2 text-sm p-8">
+                  <h1 className="text-3xl  text-[#DF3A3A] pb-4">{s.name}</h1>
+                  <p className="">{s.text}</p>
+                  <ul className="grid grid-rows-3 grid-flow-col gap-2 text-xs text-[#DF3A3A] pt-4">
+                    {s.serviceOffered.map((so) => (
+                      <span className="flex items-center gap-1">
+                        <img
+                          src={listIcon}
+                          className="w-2 h-1 "
+                          alt="listicon"
+                        />
+                        <li>{so}</li>
+                      </span>
+                    ))}
+                  </ul>
+                </div>{" "}
+                <div className=" basis-1/2 p-10">
+                  <img src={s.image} className="w-full" alt="section2" />
+                  {console.log(s.image)}
+                </div>{" "}
+              </div>
+            ) : (
+              <div className="md:flex flex-row">
+                <div className=" basis-1/2 p-10">
+                  <img src={s.image} className="w-full" alt="section2" />
+                  {console.log(s.image)}
+                </div>{" "}
+                <div className="basis-1/2 text-sm p-8">
+                  <h1 className="text-3xl  text-[#DF3A3A] pb-4">{s.name}</h1>
+                  <p className="">{s.text}</p>
+                  <ul className="grid grid-rows-3 grid-flow-col gap-2 text-xs text-[#DF3A3A] pt-4">
+                    {s.serviceOffered.map((so) => (
+                      <span className="flex items-center gap-1">
+                        <img
+                          src={listIcon}
+                          className="w-2 h-1 "
+                          alt="listicon"
+                        />
+                        <li>{so}</li>
+                      </span>
+                    ))}
+                  </ul>
+                </div>{" "}
+              </div>
+            )
+          )}
     </>
   );
 };

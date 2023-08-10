@@ -6,7 +6,6 @@ import temppicture from "./assets/temp2.jpg";
 const ContactUs = () => {
   return (
     <>
-      <Navbar />
       <div className="md:flex">
         <div className="basis-1/2 bg-indigo-100">
           <div className="md:my-16">
@@ -43,7 +42,7 @@ const ContactUs = () => {
             <MapPinIcon className="w-10 h-10 fill-red-400" />{" "}
             <span>6th Avenue, Wall Street, New York</span>
           </div> */}
-          <div className="flex flex-row">
+          <div className="flex flex-row max-sm:hidden">
             <div className="basis-1/6">
               <MapPinIcon className="md:w-10 md:h-14 sm:w-5 sm:h-5 fill-red-400" />
             </div>
@@ -55,7 +54,7 @@ const ContactUs = () => {
             <EnvelopeIcon className="w-10 h-10 fill-red-400" />
             rounddigital@gmail.com
           </div> */}
-          <div className="flex flex-row">
+          <div className="flex flex-row max-sm:hidden">
             <div className="basis-1/6">
               <EnvelopeIcon className="md:w-10 md:h-14 sm:w-5 sm:h-5 fill-red-400" />
             </div>
@@ -66,7 +65,7 @@ const ContactUs = () => {
           {/* <div>
             <PhoneIcon className="w-10 h-10 fill-red-400" /> 602- 213-4143
           </div> */}
-          <div className="flex flex-row">
+          <div className="flex flex-row max-sm:hidden">
             <div className="basis-1/6 ">
               <PhoneIcon className="md:w-10 md:h-14 sm:w-5 sm:h-5 fill-red-400" />
             </div>
