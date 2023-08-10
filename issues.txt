@@ -1,6 +1,20 @@
 Issues
 
+
+
+
+
+
+
+
+
+
+
+Solved : 
 Figma image download - Solved
-navbar - mobile view dropdown 
-contact us icons - text alignment and sizing in mobile version
-service - list - icon display
+contact us icons - text alignment and sizing in mobile version - solved
+service - list - icon display - solved
+Navbar - mobile view dropdown 
+Service page images not loading
+Service page - screen width variable not getting reload
+
