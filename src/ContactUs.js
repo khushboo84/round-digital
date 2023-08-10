@@ -28,7 +28,7 @@ const ContactUs = () => {
               type="text"
               className="resize-none rounded w-full h-60 mt-4"
             ></textarea>
-            <button className="rounded w-full h-10 bg-red-600 mt-4">
+            <button className="rounded w-full h-10 bg-[#DF3A3A] mt-4 font-bold">
               Submit
             </button>
           </div>
