@@ -1,6 +1,5 @@
 /* eslint-disable no-restricted-globals */
 import { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
 import { MapPinIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import contactpic from "../src/assets/contact.png";
 

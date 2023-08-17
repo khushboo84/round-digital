@@ -1,4 +1,10 @@
 Issues
+hero image not getting displayed according to screen - post, blog, services, about
+multiple images import - blog
+text on about page with gradient
+horizontal line
+carousal - library
+
 
 
 

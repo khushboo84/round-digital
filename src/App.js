@@ -6,6 +6,8 @@ import About from "./components/About";
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Post from "./components/Post";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/Contact" element={<ContactUs />} />
+          <Route path="blog/Post/:id" element={<Post />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

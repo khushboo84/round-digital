@@ -1,6 +1,5 @@
 /* eslint-disable no-restricted-globals */
 import { useState, useEffect } from "react";
-import Navbar from "./Navbar";
 import picservice1 from "../assets/services-1.jfif";
 import listIcon from "../assets/listIcon.png";
 import picservice3 from "../assets/services-3.png";
@@ -86,20 +85,20 @@ const Services = () => {
         <div className="">
           <img
             src={picservicesmain}
-            className="h-90 w-full"
+            className="h-80 xl:h-4/6 w-full"
             alt="Main display "
           />
 
-          <div className="text-lg absolute md:top-40 lg:top-60 left-0 right-0">
-            <h1 className="font-bold text-center md:text-3xl lg:text-4xl">
+          <div className="text-lg absolute md:top-40 lg:top-40 xl:top-60 left-0 right-0">
+            <h1 className="font-bold text-center md:text-3xl lg:text-4xl xl:text-6xl">
               Make your Digital presence matter
             </h1>
-            <p className="py-8 px-10 text-center lg:text-2xl">
+            <p className="py-8 px-10 text-center xl:pt-10 xl:text-4xl xl:pt-20 lg:text-xl md:text-2xl">
               We are a full service technology and digital solutions company
               with over 20 years of experience in industry.
             </p>
-            <div className=" flex justify-center ">
-              <button className="rounded-full text-sm px-2 py-2 bg-[#DF3A3A] text-white">
+            <div className=" flex justify-center xl:pt-20 ">
+              <button className="rounded-full text-sm px-2 py-2 xl:p-4 xl:text-3xl bg-[#DF3A3A] text-white">
                 Explore
               </button>
             </div>
