@@ -4,6 +4,7 @@ multiple images import - blog
 text on about page with gradient
 horizontal line
 carousal - library
+translator
 
 
 
