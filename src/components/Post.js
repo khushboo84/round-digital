@@ -9,11 +9,11 @@ const Post = () => {
   const Post = blogPosts.filter((blog) => blog.id === ID);
 
   return (
-    <div>
+    <div className="container mx-auto lg:w-3/4">
       <ul>
         {Post.map((post) => (
           <>
-            <div className="pt-4 px-4 md:px-10 lg:px-36 xl:px-52">
+            <div className="pt-4 px-4 md:px-20 lg:px-46  ">
               <button className="text-white text-xs md:text-sm lg:text-md xl:text-lg font-bold bg-red-500 p-1 rounded">
                 {post.genre}
               </button>

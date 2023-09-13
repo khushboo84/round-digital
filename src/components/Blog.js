@@ -125,89 +125,53 @@ const Blog = () => {
 
   return (
     <>
-      <div className=" pl-[5%] pr-[5%]">
-        <img
-          src={blogmainimg}
-          alt="Main"
-          className="w-full h-80 md:h-96 lg:h-4/5  "
-        ></img>
-        <div className="card p-12 ">
-          <div className="h-3/4 w-full  border-2 border-gray-200 rounded shadow-lg relative bottom-40 bg-white -mb-48 md:w-1/2 ">
-            <div className="p-4">
-              <button className="text-white text-xs  bg-red-600 p-1 rounded">
-                Technology
-              </button>
-              <h3 className="font-bold text-lg py-4 lg:text-2xl xl:text-3xl">
-                The Impact of Technology on the Workplace: How Technology is
-                Changing
-              </h3>
-              <div className="flex flex-row row text-xs">
-                <span className="">
-                  {" "}
-                  <img
-                    src={blog1}
-                    alt="blogcard1"
-                    className=" basis-1/4 rounded-full h-10 "
-                  />
-                </span>
-                <span className="py-4 basis-2/4 px-2 font-bold text-gray-500">
-                  Tracey Wilson
-                </span>
-                <span className=" py-4 basis-2/4 font-bold text-gray-500">
-                  10th August 2023
-                </span>
+      <div className="container mx-auto xl:w-3/4">
+        <div className=" pl-[5%] pr-[5%]">
+          <img
+            src={blogmainimg}
+            alt="Main"
+            className="w-full h-80 md:h-96 lg:h-4/5  "
+          ></img>
+          <div className="card p-12 ">
+            <div className="h-3/4 w-full  border-2 border-gray-200 rounded shadow-lg relative bottom-40 bg-white -mb-48 md:w-1/2 ">
+              <div className="p-4">
+                <button className="text-white text-xs  bg-red-600 p-1 rounded">
+                  Technology
+                </button>
+                <h3 className="font-bold text-lg py-4 lg:text-2xl xl:text-3xl">
+                  The Impact of Technology on the Workplace: How Technology is
+                  Changing
+                </h3>
+                <div className="flex flex-row row text-xs">
+                  <span className="">
+                    {" "}
+                    <img
+                      src={blog1}
+                      alt="blogcard1"
+                      className=" basis-1/4 rounded-full h-10 "
+                    />
+                  </span>
+                  <span className="py-4 basis-2/4 px-2 font-bold text-gray-500">
+                    Tracey Wilson
+                  </span>
+                  <span className=" py-4 basis-2/4 font-bold text-gray-500">
+                    10th August 2023
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {screenSize < 768 ? (
-        blogPosts.map((blog) => (
-          <Link to={`Post/${blog.id}`}>
-            <div className="card p-6 ">
-              <div className="h-3/4 w-full  border-2 border-gray-200 rounded">
-                <div className="p-4">
-                  <img
-                    src={blog.image}
-                    alt="temp"
-                    className="w-full h-60 p-1 pb-4"
-                  ></img>
-                  <button className="text-red-900 text-xs font-bold bg-red-100 p-1 rounded">
-                    {blog.genre}
-                  </button>
-                  <h1 className="font-bold text-lg py-4">{blog.desc}</h1>
-                  <div className="flex flex-row row text-xs">
-                    <span className="">
-                      {" "}
-                      <img
-                        src={blog.authorImage}
-                        alt="blogcard1"
-                        className=" basis-1/4 rounded-full h-10 "
-                      />
-                    </span>
-                    <span className="py-4 basis-2/4 px-2 font-bold text-gray-500">
-                      {blog.authorName}
-                    </span>
-                    <span className=" py-4 basis-2/4 font-bold text-gray-500">
-                      {blog.date}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))
-      ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 p-10">
-          {blogPosts.map((blog) => (
+        {screenSize < 768 ? (
+          blogPosts.map((blog) => (
             <Link to={`Post/${blog.id}`}>
-              <div className="card p-4  ">
-                <div className="h-full  border-2 border-gray-200 rounded-md">
-                  <div className="p-4">
+              <div className="card p-6 ">
+                <div className="h-3/4 w-full  border-2 border-gray-200 rounded">
+                  <div className="p-4" key={blog.id}>
                     <img
                       src={blog.image}
                       alt="temp"
-                      className="w-full h-80 p-1 pb-4"
+                      className="w-full h-60 p-1 pb-4"
                     ></img>
                     <button className="text-red-900 text-xs font-bold bg-red-100 p-1 rounded">
                       {blog.genre}
@@ -230,12 +194,50 @@ const Blog = () => {
                       </span>
                     </div>
                   </div>
-                </div>{" "}
+                </div>
               </div>
             </Link>
-          ))}
-        </div>
-      )}
+          ))
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 p-10">
+            {blogPosts.map((blog) => (
+              <Link to={`Post/${blog.id}`}>
+                <div className="card p-4  ">
+                  <div className="h-full  border-2 border-gray-200 rounded-md">
+                    <div className="p-4" key={blog.id}>
+                      <img
+                        src={blog.image}
+                        alt="temp"
+                        className="w-full h-80 p-1 pb-4"
+                      ></img>
+                      <button className="text-red-900 text-xs font-bold bg-red-100 p-1 rounded">
+                        {blog.genre}
+                      </button>
+                      <h1 className="font-bold text-lg py-4">{blog.desc}</h1>
+                      <div className="flex flex-row row text-xs">
+                        <span className="">
+                          {" "}
+                          <img
+                            src={blog.authorImage}
+                            alt="blogcard1"
+                            className=" basis-1/4 rounded-full h-10 "
+                          />
+                        </span>
+                        <span className="py-4 basis-2/4 px-2 font-bold text-gray-500">
+                          {blog.authorName}
+                        </span>
+                        <span className=" py-4 basis-2/4 font-bold text-gray-500">
+                          {blog.date}
+                        </span>
+                      </div>
+                    </div>
+                  </div>{" "}
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
     </>
   );
 };

@@ -13,10 +13,10 @@ const Footer = () => {
 
   return (
     <>
-      <div className="shadow-md w-full px-[10%] bg-white">
+      <div className="shadow-md w-full px-[10%] bg-white sticky mt-32 ">
         <div className="md:flex flex-row py-6 px-7 font-bold hidden">
           {/* Logo here */}
-          <div className="basis-2/6">
+          <div className=" basis-1/5">
             <img src={logo} alt="logo" />
           </div>
 
@@ -35,9 +35,9 @@ const Footer = () => {
         <hr className="w-full" />
         <h1 className="text-center  ">CopyRight&copy;RoundDigital</h1>
       </div>
-      <h1 className="text-center hidden max-md:inline px-[30%] ">
+      {/* <h1 className="text-center hidden sm:inline px-[30%] ">
         CopyRight&copy;RoundDigital
-      </h1>
+      </h1> */}
     </>
   );
 };

@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
 import { useState, useEffect } from "react";
-import picservice1 from "../assets/services-1.jfif";
+import picservice1 from "../assets/services-1.png";
 import listIcon from "../assets/listIcon.png";
 import picservice3 from "../assets/services-3.png";
 import picservice2 from "../assets/services-2.png";
@@ -81,79 +81,60 @@ const Services = () => {
   ];
   return (
     <>
-      {screenSize > 768 ? (
-        <div className="">
-          <img
-            src={picservicesmain}
-            className="h-80 xl:h-4/6 w-full"
-            alt="Main display "
-          />
+      <div className="container mx-auto lg:w-3/4">
+        {screenSize > 768 ? (
+          <div className="">
+            <img
+              src={picservicesmain}
+              className="h-80 xl:h-4/6 w-full"
+              alt="Main display "
+            />
 
-          <div className="text-lg absolute md:top-40 lg:top-40 xl:top-60 left-0 right-0">
-            <h1 className="font-bold text-center md:text-3xl lg:text-4xl xl:text-6xl">
-              Make your Digital presence matter
-            </h1>
-            <p className="py-8 px-10 text-center xl:pt-10 xl:text-4xl xl:pt-20 lg:text-xl md:text-2xl">
-              We are a full service technology and digital solutions company
-              with over 20 years of experience in industry.
-            </p>
-            <div className=" flex justify-center xl:pt-20 ">
-              <button className="rounded-full text-sm px-2 py-2 xl:p-4 xl:text-3xl bg-[#DF3A3A] text-white">
-                Explore
-              </button>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="">
-          <img
-            src={picservicesmain}
-            className="h-80 w-full"
-            alt="Main display "
-          />
-
-          <div className="text-sm absolute top-40 ">
-            <h1 className="font-bold text-center text-2xl">
-              Make your Digital presence matter
-            </h1>
-            <p className="py-8 px-10">
-              We are a full service technology and digital solutions company
-              with over 20 years of experience in industry.
-            </p>
-            <div className=" flex justify-center ">
-              <button className="rounded-full text-sm px-2 py-2 bg-[#DF3A3A] text-white">
-                Explore
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {screenSize < "768"
-        ? services.map((s) => (
-            <div className="mx-10">
-              <div className="text-sm p-8">
-                <h1 className="text-2xl  text-[#DF3A3A] pb-4">{s.name}</h1>
-                <p className="">{s.text}</p>
-                <ul className="grid grid-rows-3 grid-flow-col gap-2 text-xs text-[#DF3A3A] pt-4">
-                  {s.serviceOffered.map((so) => (
-                    <span className="flex items-center gap-1">
-                      <img src={listIcon} className="w-2 h-1 " alt="listicon" />
-                      <li key={s.id}>{so}</li>
-                    </span>
-                  ))}
-                </ul>
-              </div>
-              <div className="p-10">
-                <img src={s.image} className="w-full h-80" alt="section2" />
+            <div className="text-lg absolute md:top-40 lg:top-40 xl:top-60 left-0 right-0">
+              <h1 className="font-bold text-center md:text-3xl lg:text-4xl xl:text-6xl">
+                Make your Digital presence matter
+              </h1>
+              <p className="py-8 px-44 text-center xl:pt-10 xl:text-xl xl:pt-20 lg:text-xl md:text-2xl">
+                We are a full service technology and digital solutions company
+                with over 20 years of experience in industry.
+              </p>
+              <div className=" flex justify-center xl:pt-10 ">
+                <button className="rounded-full text-sm px-2 py-2 xl:p-4 xl:text-2xl bg-[#DF3A3A] text-white">
+                  Explore
+                </button>
               </div>
             </div>
-          ))
-        : services.map((s) =>
-            s.id % 2 ? (
-              <div className="md:flex flex-row">
-                <div className=" basis-1/2 text-sm px-14 lg:py-28 py-10">
-                  <h1 className="text-3xl  text-[#DF3A3A] pb-4">{s.name}</h1>
+          </div>
+        ) : (
+          <div className="">
+            <img
+              src={picservicesmain}
+              className="h-80 w-full"
+              alt="Main display "
+            />
+
+            <div className="text-sm absolute top-40 ">
+              <h1 className="font-bold text-center text-2xl">
+                Make your Digital presence matter
+              </h1>
+              <p className="py-8 px-10">
+                We are a full service technology and digital solutions company
+                with over 20 years of experience in industry.
+              </p>
+              <div className=" flex justify-center ">
+                <button className="rounded-full text-sm px-2 py-2 bg-[#DF3A3A] text-white">
+                  Explore
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {screenSize < "768"
+          ? services.map((s) => (
+              <div className="mx-10">
+                <div className="text-sm p-8">
+                  <h1 className="text-2xl  text-[#DF3A3A] pb-4">{s.name}</h1>
                   <p className="">{s.text}</p>
                   <ul className="grid grid-rows-3 grid-flow-col gap-2 text-xs text-[#DF3A3A] pt-4">
                     {s.serviceOffered.map((so) => (
@@ -167,35 +148,57 @@ const Services = () => {
                       </span>
                     ))}
                   </ul>
-                </div>{" "}
-                <div className=" basis-1/2 p-10">
+                </div>
+                <div className="p-10">
                   <img src={s.image} className="w-full h-80" alt="section2" />
-                </div>{" "}
+                </div>
               </div>
-            ) : (
-              <div className="md:flex flex-row">
-                <div className=" basis-1/2 p-10">
-                  <img src={s.image} className="w-full h-80" alt="section2" />
-                </div>{" "}
-                <div className="basis-1/2 text-sm px-14 lg:py-28 py-10">
-                  <h1 className="text-3xl  text-[#DF3A3A] pb-4">{s.name}</h1>
-                  <p className="">{s.text}</p>
-                  <ul className="grid grid-rows-3 grid-flow-col gap-2 text-xs text-[#DF3A3A] pt-4">
-                    {s.serviceOffered.map((so) => (
-                      <span className="flex items-center gap-1">
-                        <img
-                          src={listIcon}
-                          className="w-2 h-1 "
-                          alt="listicon"
-                        />
-                        <li key={s.id}>{so}</li>
-                      </span>
-                    ))}
-                  </ul>
-                </div>{" "}
-              </div>
-            )
-          )}
+            ))
+          : services.map((s) =>
+              s.id % 2 ? (
+                <div className="md:flex flex-row">
+                  <div className=" basis-1/2 text-sm px-14 lg:py-28 py-10">
+                    <h1 className="text-3xl  text-[#DF3A3A] pb-4">{s.name}</h1>
+                    <p className="">{s.text}</p>
+                    <ul className="grid grid-rows-3 grid-flow-col gap-2 text-xs text-[#DF3A3A] pt-4">
+                      {s.serviceOffered.map((so) => (
+                        <span className="flex items-center gap-1">
+                          <img src={listIcon} className=" " alt="listicon" />
+                          <li key={s.id}>{so}</li>
+                        </span>
+                      ))}
+                    </ul>
+                  </div>{" "}
+                  <div className="basis-1/2"></div>
+                  <div className="basis-1/2 p-12">
+                    <img src={s.image} className="  h-[400px]" alt="section2" />
+                  </div>{" "}
+                </div>
+              ) : (
+                <div className="md:flex flex-row">
+                  <div className=" basis-1/2 p-10">
+                    <img src={s.image} className=" h-[400px]" alt="section2" />
+                  </div>{" "}
+                  <div className="basis-1/2 text-sm px-14 lg:py-28 py-10">
+                    <h1 className="text-3xl  text-[#DF3A3A] pb-4">{s.name}</h1>
+                    <p className="">{s.text}</p>
+                    <ul className="grid grid-rows-3 grid-flow-col gap-2 text-xs text-[#DF3A3A] pt-4">
+                      {s.serviceOffered.map((so) => (
+                        <span className="flex items-center gap-1">
+                          <img
+                            src={listIcon}
+                            className="w-2 h-1 "
+                            alt="listicon"
+                          />
+                          <li key={s.id}>{so}</li>
+                        </span>
+                      ))}
+                    </ul>
+                  </div>{" "}
+                </div>
+              )
+            )}
+      </div>
     </>
   );
 };

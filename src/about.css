@@ -1,0 +1,16 @@
+/* styles.css */
+.gradient-text {
+  background: var(
+    --Brand-Gradient,
+    linear-gradient(
+      90deg,
+      #6953d3 1.22%,
+      #f98085 28.43%,
+      #8566f1 14.82%,
+      #f98085 42.03%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
